@@ -1,1 +1,1 @@
-# kudarakeitaのフェーズ１のウェブサイトのメイン
+# kudarakeitaのフェーズ１のウェブサイトのdevelop
