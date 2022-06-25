@@ -1,1 +1,1 @@
-# gen3.0-keitakuda
+# kudarakeitaのフェーズ１のウェブサイトのメイン
