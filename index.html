@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+  <header class="header">
+    <div class="header-logo"><img src="./logo.png" alt=""></div>
+    <div class="header-week">4th week</div>
+    <div class="header-button">
+        <button class="header-button-reset" id="header-button">
+          <div  class="header-button-anker">記録・投稿</div>
+        </button>
+    </div>
+    <div>
+    <section id="modalArea" class="modalArea modalNone">
+      <div id="modalBg" class="modalBg"></div>
+      <div class="modalWrapper">
+        <div class="modalContents">
+          <div class="modal-content-left">
+            <div>
+              <h1 class="modal-content-h1">学習日</h1>
+              <p class="modal-content-p">2020年10月27日</p>
+            </div>
+            <div >
+              <h1 class="modal-content-h1">学習コンテンツ（複数選択可）</h1>
+              <div class="modal-content-wrap">
+              <p class="modal-content-p">N予備校</p>
+              <p class="modal-content-p">ドットインストール</p>
+              <p class="modal-content-p">POSSE課題</p>
+            </div>
+            </div>
+            <div >
+              <h1 class="modal-content-h1">学習言語（複数選択可）</h1>
+              <div class="modal-content-wrap">
+              <p class="modal-content-p">HTML</p>
+              <p class="modal-content-p">CSS</p>
+              <p class="modal-content-p">JavaScript</p>
+              <p class="modal-content-p">PHP</p>
+              <p class="modal-content-p">Laravel</p>
+              <p class="modal-content-p">SQL</p>
+              <p class="modal-content-p">SHELL</p>
+              <p class="modal-content-p">情報システム基礎知識(その他)</p>
+            </div>
+            </div>
+          </div>
+          <div class="modal-content-right">
+            <div>
+              <h1 class="modal-content-h1">学習時間</h1>
+              <p class="modal-content-p">2020年10月27日</p>
+            </div>
+            <div>
+              <h1 class="modal-content-h1">Twitter用コメント</h1>
+              <p class="modal-content-p">2020年10月27日</p>
+            </div>
+            <div>
+              twitterにシェアする
+            </div>
+          </div>
+        </div>
+        <button id="modal-button" class="modal-button">記録・投稿</button>
+        <div id="closeModal" class="closeModal">
+          <span class="round_btn"></span>
+        </div>
+      </div>
+    </section>
+    </div>
+    <section id="modalArea2" class="modalArea2 modalNone2">
+      <div id="modalBg2" class="modalBg2"></div>
+      <div class="modalWrapper2">
+        <div class="awesome-main">
+          <div class="awesome">
+            <div class="awesome-english">AWESOME!</div>
+            <div class="check-icon"></div>
+            <div class="check-icon-check"></div>
+            <p class="awesome-sentence">記録・投稿<br>完了しました</p>
+          </div>
+        </div>
+        <div id="closeModal2" class="closeModal2">
+          <span class="round_btn"></span>
+        </div>
+      </div>
+    </section>
+  </header>
+
+
+
+
+  <main>
+    <div class="main">
+      <div class="main-left">
+        <div class="main-left-top">
+          <div class="main-left-top-1">
+            <h1 class="main-left-top-h1">Today</h1>
+            <h2 class="main-left-top-h2">3</h2>
+            <h3 class="main-left-top-h3">hour</h3>
+          </div>
+          <div class="main-left-top-2">
+            <h1 class="main-left-top-h1">Month</h1>
+            <h2 class="main-left-top-h2">120</h2>
+            <h3 class="main-left-top-h3">hour</h3>
+          </div>
+          <div class="main-left-top-3">
+            <h1 class="main-left-top-h1">Total</h1>
+            <h2 class="main-left-top-h2">1348</h2>
+            <h3 class="main-left-top-h3">hour</h3>
+          </div>
+        </div>
+        <div class="main-left-bottom">
+          ここに棒グラフ
+        </div>
+      </div>
+      <div class="main-right">
+        <div class="main-right-1">
+          <h1 class="main-right-h1">学習言語</h1>
+          <div class="main-right-graph">ここに円グラフ</div>
+          <div class="main-right-listup">リストアップ</div>
+        </div>
+        <div class="main-right-2">
+          <h1 class="main-right-h1">学習コンテンツ</h1>
+          <div class="main-right-graph">ここに円グラフ</div>
+          <div class="main-right-listup">リストアップ</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <footer class="footer">
+    <div class="footer-design">
+
+    <h2 class="footer-date">2020年　10月</h2>
+
+  </div>
+  </footer>
+
+
+<script src="./script.js"></script>
+
+</body>
+</html>

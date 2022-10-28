@@ -1,0 +1,417 @@
+/* header */
+
+.header{
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  padding: 15px 24px;
+}
+
+.header-logo {
+  position: relative;
+  width: 120px;
+  z-index: 100;
+}
+
+.header-week{
+  color: rgb(174, 174, 174);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  margin-left: 50px;
+}
+
+.header-button{
+  margin: 0 0 0 auto;
+}
+
+.header-button-reset{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+.header-button-anker{
+  color: #fff;
+  background: linear-gradient(to right, rgb(58, 36, 255), rgb(65, 212, 238));
+  border-radius: 100vh;
+  padding: 15px 50px;
+  text-decoration: none;
+}
+
+
+
+
+
+
+/* main */
+.main{
+  margin-top: 64px;
+  display: flex;
+  background-color: rgba(230, 230, 230, 0.423);
+  margin-top: 64px;
+  gap: 20px;
+}
+
+.main-left{
+  margin-top: 20px;
+}
+
+.main-left-top{
+  display: flex;
+  gap: 20px;
+}
+
+.main-left-top-1{
+  background-color: #fff;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  width: 180px;
+}
+.main-left-top-2{
+  background-color: #fff;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  width: 180px;
+}
+.main-left-top-3{
+  background-color: #fff;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  width: 180px;
+}
+
+.main-left-top-h1{
+  text-align: center;
+  color: rgb(75, 93, 197);
+  font-size: 18px; 
+  padding-top: 5px;
+}
+
+.main-left-top-h2{
+  text-align: center;
+  font-size: 40px;
+  margin: 0px;
+}
+
+.main-left-top-h3{
+  text-align: center;
+  color: rgb(179, 179, 179);
+}
+
+.main-left-bottom{
+  margin-left: 100px;
+  background-color: #fff;
+  border-radius: 15px;
+  width: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.main-right{
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.main-right-1{
+  background-color: #fff;
+  border-radius: 15px;
+  width: 300px;
+}
+
+.main-right-2{
+  background-color: #fff;
+  border-radius: 15px;
+  width: 300px;
+}
+
+.main-right-h1{
+  font-size: 25px;
+  margin: 40px 0px 0px 20px;
+  color: rgb(68, 68, 68);
+}
+
+
+
+
+
+
+/* footer */
+.footer{
+  background-color: rgba(230, 230, 230, 0.423);
+}
+
+.footer-design{
+  padding: 10px 600px;
+}
+
+.footer-date{
+  font-size: 15px;
+  text-align: center;
+}
+
+/* modal */
+
+.modalArea {
+  position: fixed;
+  z-index: 10; /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalNone{
+  display: none;
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(67, 67, 67, 0.9);
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 70%;
+  max-width: 900px;
+  padding: 10px 30px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.closeModal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.modalArea2 {
+  position: fixed;
+  z-index: 10; /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* display: none; */
+}
+
+.modalNone2{
+  display: none;
+}
+
+.modalBg2 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(67, 67, 67, 0.9);
+}
+
+.modalWrapper2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 70%;
+  max-width: 900px;
+  padding: 10px 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  height: 500px;
+}
+
+.closeModal2 {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+
+/* .modal{
+  z-index: 10000;
+  position: fixed;
+}
+
+.modal-background{
+  background-color: black;
+  margin: 0px;
+}
+
+.modal-screen{
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.modalContents{
+  display: flex;
+}
+
+.modal-content-left{
+  max-width: 450px;
+  margin-right: 20px;
+}
+
+.modal-content-right{
+  max-width: 450px;
+  margin-left: 20px;
+}
+
+.modal-content-h1{
+  font-size: 15px;
+  color: rgb(73, 73, 73);
+}
+
+.modal-content-p{
+  background-color: rgb(241, 241, 241);
+  padding: 10px;
+  border-radius: 15px;
+  margin-right: 5px;
+}
+
+.modal-content-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-button{
+  display: block;
+  width: 400px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(to right, rgb(58, 36, 255), rgb(65, 212, 238));
+  border: none;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  color: #fff;
+  background-color: #1665b0;
+  border-radius: 100vh;
+  padding: 15px 30px;
+  text-decoration: none;
+  padding: 10px 100px;
+  font-size: 20px;
+}
+
+.round_btn {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;  /* 丸みの度合い */
+  background: rgb(227, 227, 227); /* ボタンの背景色 */
+}
+ 
+.round_btn::before, .round_btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 21px;
+  background: rgb(84, 84, 84); /* バツ印の色 */
+}
+ 
+.round_btn::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+ 
+.round_btn::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.modal-finish{
+  text-align: center;
+  font-size: 20px;
+}
+
+/* awesome */
+
+.awesome{
+  text-align: center;
+  margin: 160px;
+}
+
+.awesome-english{
+  color: rgba(132, 208, 85, 0.552);
+  font-size: 18px;
+}
+
+.check-icon {
+  background-color: rgba(132, 208, 85, 0.552) ;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 50px;
+  margin: 9px auto ;
+}
+
+.check-icon-check {
+  color: rgb(255, 255, 255);
+  position:relative;
+  margin: -60px auto 60px auto;
+  width: 28px;
+  height: 16px;
+  border-bottom: solid 3px currentColor;
+  border-left: solid 3px currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.awesome-sentence {
+  color: rgb(87, 87, 87);
+  font-weight: 50;
+  letter-spacing: 2.5px;
+  line-height: 1.7;
+}
+
+/* error */
+
+
+.error{
+  max-width: 300px;
+  max-height: 600px;
+  margin: 270px auto;
+  text-align: center;
+  
+}
+
+.error-english{
+  color: rgb(251, 205, 40);
+  font-size: 18px;
+}
+
+.bikkuri{
+  color: #fff;
+  background-color: rgb(251, 205, 40) ;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 50px;
+  margin: 15px auto;
+
+}
+
+.error-sentence{
+  color: rgb(87, 87, 87);
+  font-weight: 50;
+  letter-spacing: 2.5px;
+  line-height: 1.7;
+}
