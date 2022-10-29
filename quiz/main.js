@@ -84,12 +84,12 @@ for (let i = 0; i < ALLquiz.length; i++) {
   + `<div class="Q1-answer">`
   + `<h1 class="Q1-answer-title">A</h1>`
   + `<ul class="Q1-answer-answer">`
-  + `<li><button class="Q1-answer-answer-1" id="choice-1" onclick="buttonClick(0)">${ALLquiz[i].answers[0]}</button>`
-  + `<i class="u-icon__arrow"></i></li>`
-  + `<li><button class="Q1-answer-answer-1" id="choice-2" onclick="buttonClick(1)">${ALLquiz[i].answers[1]}</button>`
-  + `<i class="u-icon__arrow"></i></li>`
-  + `<li><button class="Q1-answer-answer-1" id="choice-3" onclick="buttonClick(0)">${ALLquiz[i].answers[2]}</button>`
-  + `<i class="u-icon__arrow"></i></li>`
+  + `<li><button class="Q1-answer-answer-1" id="choice-1" onclick="buttonClick(0)">${ALLquiz[i].answers[0]}<i class="u-icon__arrow"></i></button>`
+  + `</li>`
+  + `<li><button class="Q1-answer-answer-1" id="choice-2" onclick="buttonClick(1)">${ALLquiz[i].answers[1]}<i class="u-icon__arrow"></i></button>`
+  + `</li>`
+  + `<li><button class="Q1-answer-answer-1" id="choice-3" onclick="buttonClick(0)">${ALLquiz[i].answers[2]}<i class="u-icon__arrow"></i></button>`
+  + `</li>`
   + `</ul>`
   + `</div>`
   + `<div class="Q1-seikai-huseikai">`
@@ -105,6 +105,7 @@ for (let i = 0; i < ALLquiz.length; i++) {
   + `${ALLquiz[i].bunkei}`
   + `</div>`
 
-  elem.innerHTML = main
+  elem.innerHTML = main;
   
-}
+};
+

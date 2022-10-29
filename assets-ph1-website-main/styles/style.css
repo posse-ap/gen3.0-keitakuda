@@ -91,7 +91,7 @@ dt {
     src: url("../fonts/posse-icon.ttf?bbqgr3") format("truetype"), url("../fonts/posse-icon.woff?bbqgr3") format("woff"), url("../fonts/posse-icon.svg?bbqgr3#posse-icon") format("svg");
   }
   i, .icomoon-liga {
-    speak: never;
+    /* speak: never; */
     -ms-font-feature-settings: "liga" 1;
     font-feature-settings: "liga";
     -webkit-font-smoothing: antialiased;
@@ -145,7 +145,7 @@ dt {
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 1000;
+    z-index: 10000000;
   }
 
   .p-header__nav {
@@ -154,7 +154,7 @@ dt {
 
   .p-header__nav__list {
     display: flex;
-    gap: 32px.;
+    gap: 32px;
   }
 
   .p-header__nav__item__link {
@@ -167,6 +167,7 @@ dt {
   .p-header__sns {
     margin-left: 32px;
   }
+
 
 
   /* ハンバーガーメニュー */
@@ -287,7 +288,7 @@ dt {
   
   
   /* ハンバーガーメニュークリック後のスタイル */
-  .header__nav.active {
+  .header__inner.active {
     transform: translateX(0);
   }
   
@@ -497,6 +498,7 @@ dt {
     display: flex;
     margin: 0 auto;
     max-width: 1280px;
+    width: 100%;
     position: relative;
   }
 
@@ -561,7 +563,7 @@ dt {
   }
   
   .p-top-about__body {
-    -ms-grid-columns: (1fr)[2];
+    /* -ms-grid-columns: (1fr)[2]; */
     display: -ms-grid;
     display: grid;
     gap: 40px;
@@ -621,7 +623,7 @@ dt {
     margin-top: 64px;
   }
   .p-quiz-box__answer__list {
-    -ms-grid-columns: (1fr)[3];
+    /* -ms-grid-columns: (1fr)[3]; */
     display: -ms-grid;
     display: grid;
     gap: 24px;
@@ -740,14 +742,14 @@ dt {
   }
 
   .main-title{
-    margin-top: 7%;
+    margin-top: 3%;
     color: #fff;
     font-size: 15px;
     font-weight: 800;
   }
 
   .main-subtitle{
-    margin-top: 30px;
+    margin-top: 15px;
     color: #fff;
     font-size: 55px;
     font-weight: 800;
@@ -762,12 +764,12 @@ dt {
   }
 
   .Q1-image-div{
-    width: 650px;
+    width: 400px;
   }
 
   .Q1-image{
     width: 100%;
-    margin: 80px 150px;
+    margin: 40px 75px;
   }
 
   .Q1-title{
@@ -831,6 +833,10 @@ dt {
     content: "\e903";
   }
 
+  .u-icon__arrow{
+    text-align: right;
+  }
+
   .u-icon__note:before {
     content: "\e902";
   }
@@ -850,4 +856,145 @@ dt {
     pointer-events: none;
   }
 
+.nav__items{
+  font-size: 30px;
+  text-align: center;
+  font-weight: 400;
+  gap: 100px;
+  margin-top: 100px;
+}
+
+.nav__items li{
+  margin-bottom: 30px;
+}
+
+.header__inner{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 100000;
+  top: 100%;
+  left: 0%;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(100%);
+}
+
+.header__hamburger{
+  display: none;
+}
+
+.block{
+  display: block;
+}
+
+.none{
+  display: none;
+}
+
+
+.batsu {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+ 
+.batsu::before, .batsu::after { /* 共通設定 */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px; /* 棒の幅（太さ） */
+  height: 30px; /* 棒の高さ */
+  background: #333;
+}
+ 
+.batsu::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+ 
+.batsu::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
   
+
+@media screen and (max-width: 768px) {
+  .p-header__nav__list,.p-header__sns{
+    display: none;
+  }
+  .p-top-hero__inner{
+    display: block;
+  }
+  .p-top-hero__body{
+    width: 85%;
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 0px;
+    text-align: center;
+  }
+  .p-top-hero__body__catchcopy{
+    font-size: 35px;
+  }
+  .hero-br{
+    display: none;
+  }
+  .p-top-hero__scroll{
+    display: none;
+  }
+  .p-top-about__body{
+    display: block;
+  }
+  .p-top-about__image{
+    width: 100%;
+  }
+  .p-top-about__image img{
+    width: 100%;
+    border-radius: 20px;
+  }
+  .p-top-about__content p{
+    font-size: 20px;
+  }
+
+  .header__hamburger{
+    display: block;
+  }
+
+  .main-subtitle{
+    font-size: 40px;
+  }
+
+  .main-title{
+    margin-top: -5%;
+  }
+
+  .main-quiz{
+    margin: 0px 10px;
+    width: 100%;
+  }
+
+  .Q1-answer-answer{
+    display: block;
+    width: 100%;
+  }
+
+  .Q1-answer-answer li,.Q1-answer-answer-1{
+    width: 100%;
+  }
+
+  .Q1-answer{
+    font-weight: 300;
+  }
+
+  .Q1-image{
+    width: 100%;
+    margin: 20px;
+  }
+
+  .Q1-image-div{
+    width: 100%;
+  }
+}
