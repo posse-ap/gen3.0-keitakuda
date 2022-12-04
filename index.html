@@ -27,42 +27,60 @@
         <div class="modalContents">
           <div class="modal-content-left">
             <div>
-              <h1 class="modal-content-h1">学習日</h1>
-              <p class="modal-content-p">2020年10月27日</p>
+              <h1 class="modal-content-h1">学習日 <br>              
+                <label for="start">Start date:</label>
+  <input type="date" id="start" name="trip-start"
+         min="2022-01-01" max="2023-12-31"></h1>
+
             </div>
             <div >
               <h1 class="modal-content-h1">学習コンテンツ（複数選択可）</h1>
               <div class="modal-content-wrap">
-              <p class="modal-content-p">N予備校</p>
-              <p class="modal-content-p">ドットインストール</p>
-              <p class="modal-content-p">POSSE課題</p>
+              <p class="modal-content-p"><label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">N予備校</span></label></p>
+              <p class="modal-content-p"><label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">ドットインストール</span></label></p>
+              <p class="modal-content-p"><label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">POSSE課題</span></label></p>
             </div>
             </div>
             <div >
               <h1 class="modal-content-h1">学習言語（複数選択可）</h1>
               <div class="modal-content-wrap">
-              <p class="modal-content-p">HTML</p>
-              <p class="modal-content-p">CSS</p>
-              <p class="modal-content-p">JavaScript</p>
-              <p class="modal-content-p">PHP</p>
-              <p class="modal-content-p">Laravel</p>
-              <p class="modal-content-p">SQL</p>
-              <p class="modal-content-p">SHELL</p>
-              <p class="modal-content-p">情報システム基礎知識(その他)</p>
+              <p class="modal-content-p"><label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">HTML</span></label></p>
+              <p class="modal-content-p"><label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">CSS</span></label></p>
+              <p class="modal-content-p"><label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">JavaScript</span></label></p>
+              <p class="modal-content-p"><label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">PHP</span></label></p>
+              <p class="modal-content-p"><label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">Laravel</span></label></p>
+              <p class="modal-content-p"><label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">SQL</span></label></p>
+              <p class="modal-content-p"><label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">SHELL</span></label></p>
+              <p class="modal-content-p"><label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">情報システム基礎知識(その他)</span></label></p>
             </div>
             </div>
           </div>
           <div class="modal-content-right">
             <div>
               <h1 class="modal-content-h1">学習時間</h1>
-              <p class="modal-content-p">2020年10月27日</p>
+              <p class="modal-content-p" id="modal-content-gakushu"></p>
             </div>
             <div>
               <h1 class="modal-content-h1">Twitter用コメント</h1>
-              <p class="modal-content-p">2020年10月27日</p>
+              <p class="modal-content-p">
+                <textarea id="txtbox"  class="content2"></textarea><br />
+<button id="tweet">              <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">Twitterにシェアする</span></label></button>
+<hr />
+<script>
+    document.getElementById("tweet").addEventListener('click', function(event) {
+        event.preventDefault();
+        var left = Math.round(window.screen.width / 2 - 275);
+        var top = (window.screen.height > 420) ? Math.round(window.screen.height / 2 - 210) : 0;
+        window.open(
+            "https://twitter.com/intent/tweet?text=" + encodeURIComponent(document.getElementById("txtbox").value),
+            null,
+            "scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=550,height=420,left=" + left + ",top=" + top);
+    });
+</script>
+              </p>
             </div>
             <div>
-              twitterにシェアする
+              <!-- <label class="ECM_CheckboxInput"><input class="ECM_CheckboxInput-Input" type="checkbox"><span class="ECM_CheckboxInput-DummyInput"></span><span class="ECM_CheckboxInput-LabelText">Twitterにシェアする</span></label> -->
             </div>
           </div>
         </div>
@@ -73,9 +91,22 @@
       </div>
     </section>
     </div>
+
     <section id="modalArea2" class="modalArea2 modalNone2">
       <div id="modalBg2" class="modalBg2"></div>
       <div class="modalWrapper2">
+        <div class="spinner-box">
+          <div class="three-quarter-spinner"></div>
+        </div>
+        <div id="closeModal2" class="closeModal2">
+          <span class="round_btn"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="modalArea3" class="modalArea3 modalNone3">
+      <div id="modalBg3" class="modalBg3"></div>
+      <div class="modalWrapper3">
         <div class="awesome-main">
           <div class="awesome">
             <div class="awesome-english">AWESOME!</div>
@@ -84,7 +115,7 @@
             <p class="awesome-sentence">記録・投稿<br>完了しました</p>
           </div>
         </div>
-        <div id="closeModal2" class="closeModal2">
+        <div id="closeModal3" class="closeModal3">
           <span class="round_btn"></span>
         </div>
       </div>
@@ -115,19 +146,21 @@
           </div>
         </div>
         <div class="main-left-bottom">
-          ここに棒グラフ
+          <canvas class="left-barchart" id="barchart" width="" height="430px"></canvas>
         </div>
       </div>
       <div class="main-right">
         <div class="main-right-1">
           <h1 class="main-right-h1">学習言語</h1>
-          <div class="main-right-graph">ここに円グラフ</div>
-          <div class="main-right-listup">リストアップ</div>
+          <div class="main-right-graph">
+            <canvas class="doughnutleft" id="doughnutchart" width="" height="500px"></canvas>
+          </div>
         </div>
         <div class="main-right-2">
           <h1 class="main-right-h1">学習コンテンツ</h1>
-          <div class="main-right-graph">ここに円グラフ</div>
-          <div class="main-right-listup">リストアップ</div>
+          <div class="main-right-graph">
+            <canvas class="doughnutright" id="doughnutchart2" width="" height="500px"></canvas>
+          </div>
         </div>
       </div>
     </div>
@@ -144,7 +177,11 @@
   </footer>
 
 
-<script src="./script.js"></script>
+<script src="./js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="./js/barchart.js"></script>
+<script src="./js/doughnutchart.js"></script>
 
 </body>
 </html>

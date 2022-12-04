@@ -1,8 +1,9 @@
 /* header */
 
 .header{
-  left: 0;
+
   position: fixed;
+  left: 0;
   right: 0;
   top: 0;
   z-index: 1000;
@@ -29,6 +30,7 @@
 
 .header-button{
   margin: 0 0 0 auto;
+
 }
 
 .header-button-reset{
@@ -46,6 +48,7 @@
   border-radius: 100vh;
   padding: 15px 50px;
   text-decoration: none;
+  filter: drop-shadow(5px 5px 5px rgba(0, 8, 168, 0.6));
 }
 
 
@@ -58,12 +61,14 @@
   margin-top: 64px;
   display: flex;
   background-color: rgba(230, 230, 230, 0.423);
-  margin-top: 64px;
   gap: 20px;
+  width: 100%;
+  height: 84vh;
 }
 
 .main-left{
-  margin-top: 20px;
+  margin-top: 50px;
+  width: 50%;
 }
 
 .main-left-top{
@@ -76,19 +81,22 @@
   border-radius: 15px;
   margin-bottom: 20px;
   margin-left: 100px;
-  width: 180px;
+  width: 33%;
+  filter: drop-shadow(5px 5px 5px rgba(200, 200, 200, 0.6));
 }
 .main-left-top-2{
   background-color: #fff;
   border-radius: 15px;
   margin-bottom: 20px;
-  width: 180px;
+  width: 33%;
+  filter: drop-shadow(5px 5px 5px rgba(200, 200, 200, 0.6));
 }
 .main-left-top-3{
   background-color: #fff;
   border-radius: 15px;
   margin-bottom: 20px;
-  width: 180px;
+  width: 33%;
+  filter: drop-shadow(5px 5px 5px rgba(200, 200, 200, 0.6));
 }
 
 .main-left-top-h1{
@@ -114,13 +122,18 @@
   background-color: #fff;
   border-radius: 15px;
   width: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  height: auto;
+  filter: drop-shadow(5px 5px 5px rgba(200, 200, 200, 0.6));
+}
+
+.left-barchart{
+  width: 100%;
+  padding: 20px;
 }
 
 .main-right{
   display: flex;
-  margin-top: 20px;
+  margin-top: 50px;
   gap: 20px;
 }
 
@@ -128,12 +141,26 @@
   background-color: #fff;
   border-radius: 15px;
   width: 300px;
+  filter: drop-shadow(5px 5px 5px rgba(200, 200, 200, 0.6));
+  height: 94%;
 }
 
 .main-right-2{
   background-color: #fff;
   border-radius: 15px;
   width: 300px;
+  filter: drop-shadow(5px 5px 5px rgba(200, 200, 200, 0.6));
+  height: 94%;
+}
+
+.doughnutleft{
+  width: 100%;
+  padding: 20px;
+}
+
+.doughnutright{
+  width: 100%;
+  padding: 20px;
 }
 
 .main-right-h1{
@@ -241,6 +268,46 @@
   cursor: pointer;
 }
 
+.modalArea3 {
+  position: fixed;
+  z-index: 10; /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* display: none; */
+}
+
+.modalNone3{
+  display: none;
+}
+
+.modalBg3 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(67, 67, 67, 0.9);
+}
+
+.modalWrapper3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 70%;
+  max-width: 900px;
+  padding: 10px 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  height: 500px;
+}
+
+.closeModal3 {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
 
 /* .modal{
   z-index: 10000;
@@ -274,10 +341,11 @@
 .modal-content-h1{
   font-size: 15px;
   color: rgb(73, 73, 73);
+  font-weight: bold;
 }
 
 .modal-content-p{
-  background-color: rgb(241, 241, 241);
+  background-color: rgb(243, 243, 243);
   padding: 10px;
   border-radius: 15px;
   margin-right: 5px;
@@ -338,6 +406,200 @@
 .modal-finish{
   text-align: center;
   font-size: 20px;
+}
+
+.ECM_CheckboxInput {
+  /* padding: 12px 8px; */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.ECM_CheckboxInput-Input {
+  margin: 0;
+  width: 0;
+  opacity: 0;
+}
+.ECM_CheckboxInput:hover{
+  /* background: rgba(0, 0, 0, 0.05) !important; */
+}
+.ECM_CheckboxInput:hover > .ECM_CheckboxInput-DummyInput{
+  transform: scale(1.1);
+}
+.ECM_CheckboxInput-Input:focus + .ECM_CheckboxInput-DummyInput{
+  transform: scale(1.1);
+}
+.ECM_CheckboxInput-Input:checked + .ECM_CheckboxInput-DummyInput {
+  background: rgb(9, 50, 234);
+}
+.ECM_CheckboxInput-Input:checked + .ECM_CheckboxInput-DummyInput::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  height: 4px;
+  border-radius: 2px;
+  transform: translate(-6px, 5px) rotateZ(-135deg);
+  transform-origin: 2px 2px;
+  background: #FFFFFF;
+}
+.ECM_CheckboxInput-Input:checked + .ECM_CheckboxInput-DummyInput::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 4px;
+  border-radius: 2px;
+  transform: translate(-6px, 5px) rotateZ(-45deg);
+  transform-origin: 2px 2px;
+  background: #ffffff;
+}
+.ECM_CheckboxInput-Input:checked + .modal-content-p {
+  background-color:#4ee1f4;
+ }
+.ECM_CheckboxInput-DummyInput {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: solid 2px transparent;
+  background: rgba(0, 0, 0, .15);
+  border-radius: 50%;
+  transition: all .15s linear;
+}
+.ECM_CheckboxInput-LabelText {
+  margin-left: 3px;
+  display: block;
+  font-size: 18px;
+  /* font-weight: bold; */
+}
+
+.ECM_CheckboxInput-DummyInput::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  height: 4px;
+  border-radius: 2px;
+  transform: translate(-6px, 5px) rotateZ(-135deg);
+  transform-origin: 2px 2px;
+  background: #FFFFFF;
+}
+.ECM_CheckboxInput-DummyInput::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 4px;
+  border-radius: 2px;
+  transform: translate(-6px, 5px) rotateZ(-45deg);
+  transform-origin: 2px 2px;
+  background: #ffffff;
+}
+
+#modal-content-gakushu{
+  height: 50px;
+}
+
+#tweet{
+  border: none;
+}
+
+#txtbox{
+  border: none;
+  background-color: rgb(243, 243, 243);
+  width: 350px;
+  height: 300px;
+}
+
+.spinner-box {
+  width: 900px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spin3D {
+  from {
+    transform: rotate3d(.5,.5,.5, 360deg);
+  }
+  to{
+    transform: rotate3d(0deg);
+  }
+}
+
+@keyframes configure-clockwise {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes configure-xclockwise {
+  0% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-135deg);
+  }
+  75% {
+    transform: rotate(-225deg);
+  }
+  100% {
+    transform: rotate(-315deg);
+  }
+}
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: .25;
+    transform: scale(.75);
+  }
+}
+.three-quarter-spinner {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #538efb;
+  border-top: 10px solid transparent;
+  border-radius: 50%;
+  animation: spin .5s linear 0s infinite;
 }
 
 /* awesome */
@@ -414,4 +676,140 @@
   font-weight: 50;
   letter-spacing: 2.5px;
   line-height: 1.7;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .header{
+    left: 0;
+    max-width: 768px;
+    width: 100%;
+  }
+  .header-button-anker{
+    /* display: none; */
+    margin-top: 30px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    width: 80%;
+  }
+  .main{
+    max-width: 768px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    gap: 0px;
+  }
+  .main-left{
+    width: 100%;
+    padding-top: 20px;
+  }
+  .main-left-top{
+    gap: 16px;
+  }
+  .main-left-top-1{
+    margin-bottom: 16px;
+    margin-left: 20px;
+  }
+  .main-left-top-2{
+    margin-bottom: 16px;
+  }
+  .main-left-top-3{
+    margin-bottom: 16px;
+    margin-right: 20px;
+  }
+  .main-left-bottom{
+    margin: 16px 20px;
+  }
+  .main-right{
+    margin-top: 0px;
+    gap: 16px;
+  }
+  .main-right-1{
+    margin-left: 20px;
+    width: 50%;
+  }
+  .main-right-2{
+    margin-right: 20px;
+    width: 50%;
+  }
+
+  .footer{
+    max-width: 768px;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+  .footer-design{
+    padding: 10px 0px;
+  }
+
+  .modalArea{
+    max-width: 768px;
+  }
+  .modalBg{
+
+  }
+  .modalWrapper{
+    margin-top: 100px;
+    height: 100%;
+    max-width: 768px;
+    width: 92.2%;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .modalContents{
+    display: block;
+  }
+  .modal-content-left{
+    max-width: 768px;
+    margin: 0px 20px;
+  }
+  .modal-content-right{
+    max-width: 768px;
+    margin: 0px 20px;
+  }
+  .modal-content-p{
+  }
+  .ECM_CheckboxInput-LabelText{
+    font-size: 15px;
+  }
+  #txtbox{
+    height: 170px;
+  }
+  .modal-button{
+   width: 90%;
+  }
+  .modalWrapper2{
+    margin-top: 100px;
+    height: 100%;
+    max-width: 768px;
+    width: 92.2%;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .spinner-box{
+    max-width: 768px;
+  }
+  .modalWrapper3{
+    margin-top: 100px;
+    height: 100%;
+    max-width: 768px;
+    width: 92.2%;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .awesome{
+    margin: 350px 160px;
+  }
+  .spinner-box{
+    margin: 150px 0px;
+  }
+  .error{
+    max-width: 768px;
+  }
+  .errormain{
+    background-color: ;
+  }
 }
